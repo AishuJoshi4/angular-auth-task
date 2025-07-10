@@ -1,0 +1,6 @@
+<div *ngIf="store.loading$()" class="spinner"></div>
+<ul *ngIf="!store.loading$()">
+    <li *ngFor="let item of store.items$()">
+        <strong>{{ item.name }}</strong>: {{ item.description }}
+    </li>
+</ul>
