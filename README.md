@@ -22,6 +22,11 @@ cd angular-auth-task
 
 npm install --legacy-peer-deps
 
+when you do npm install you will get 
+ERROR: No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT" this error; as DOCUMENT is imported from '@angular/core'; import it from  '@angular/common' like below:
+import { DOCUMENT } from '@angular/common'; due to version changes
+and then run
+
 3. Run the App
 
 ng serve
@@ -39,3 +44,5 @@ Password: password123
 Architecture and Approach
 
 This app uses Angular standalone components and Signal Store for lightweight state management. Routes are protected using guards, and modules are lazy-loaded for better performance. A mock interceptor simulates login and data APIs. The list page fetches items with a loading spinner. Signals manage UI state reactively without external state libraries.
+
+import { DOCUMENT, PLATFORM_ID, Inject, Injectable } from '@angular/core';
