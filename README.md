@@ -14,13 +14,13 @@ Angular Reactive Forms
 Setup Instructions
 
 1. Clone the Repository
-https://github.com/AishuJoshi4/angular-auth-task.git
+git clone https://github.com/AishuJoshi4/angular-auth-task.git
 
 cd angular-auth-task
 
 2. Install Dependencies
 
-npm install
+npm install --legacy-peer-deps
 
 3. Run the App
 
